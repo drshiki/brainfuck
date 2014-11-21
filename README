@@ -1,0 +1,11 @@
+/*
+* This is a lightweight interpreter in c for the program language which is called
+* BrainFuck, although its name is so absurd and is so little, it is Turing-complete.
+*
+* If you have any advice or you want to make some improvement for it, please contact
+* me by xiaoguaivshaijian@163.com, if you are willing to throw yourself into this
+* project¡ê?it is my pleasuer. Please contact me, I will get you a copy if you need.
+*
+* As you see, this program has many bugs, I believe it could be better in one day,
+* welcome you join my project.
+*/
