@@ -1,11 +1,14 @@
 #include "bf.h"
 
-void noExecLoop(char **pstring){
+char* noExecLoop(char **pstring, char *curp){
 	
-	while(**pstring != ']'){
-		(*pstring)++;
+	for((*pstring)++;**pstring != ']';(*pstring)++){
+		if (**pstring == '['){
+			subInterpreter(pstring, curp);
+		}
 	}
 
+	return curp;
 }
 
 char* execLoop(char **pstring, char *curp){
@@ -19,14 +22,16 @@ char* execLoop(char **pstring, char *curp){
 			case '-' : (*curp)--; break;
 			case '>' : curp++;break;
 			case '<' : curp--;break;
-			case '[' : curp = subInterpreter(pstring, curp);break;
+			case '[' : curp = subInterpreter(pstring, curp);continue;
 			case ']' : 
 				if (*curp == 0){
+					//(*pstring)++;
+					//printf("==%c==",(**pstring));
 					return curp;
 				}
 				else{
 					*pstring = leftBraceStart;
-				}
+				};
 				break;
 			case '.' : printf("%c", *curp);/*getch()*/; break;
 			case ',' : *curp = getchar() ;break;
@@ -39,7 +44,8 @@ char* execLoop(char **pstring, char *curp){
 char* subInterpreter(char **pstring, char *curp){
 	
 	if(*curp == 0){
-		noExecLoop(pstring);
+		curp = noExecLoop(pstring,curp);
+
 	}else{
 		curp = execLoop(pstring,curp);
 	}
@@ -50,16 +56,21 @@ char* subInterpreter(char **pstring, char *curp){
 int intepreter(char *string, char *curp){
 	
 	char **pstring = &string;
-	
-	for(int i = 1;**pstring != '\0';(*pstring)++){
+
+	for(int i = 0;**pstring != '\0';(*pstring)++,i++){
 		
 		switch(**pstring){
 			case '+' : (*curp)++; break;
 			case '-' : (*curp)--; break;
 			case '>' : curp++;break;
 			case '<' : curp--;break;
-			case '[' : curp = subInterpreter(pstring, curp);break;
-			case ']' : puts("illegal input"); break;
+			case '[' : 
+				curp = subInterpreter(pstring, curp); 
+				//printf("%c", *((*pstring)+1));
+				break;
+			case ']' :
+				/*printf("%c", *((*pstring)+1))*/;exit(-1);
+				//continue;
 			case '.' : printf("%c", *curp);/*getch()*/; break;
 			case ',' : *curp = getchar(); break;
 			default	: break;
