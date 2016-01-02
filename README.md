@@ -31,4 +31,4 @@ Brainfuck is a Turing-complete programming language created in 1993 by Urban Mü
 
 ###This Interpreter
 This interpreter was made as a product as my beginning level
-study of programming language, hence, it is Simple and crude, use an array of 30,000 byte cells and at most accept 1,000 bytes of characters input, not support comment so some examples which was with comments are much possible to cause eceptions. It just test by a limited test set which in the directory *test*.
+study of programming language, hence, it is Simple and crude, use an array of 3,000 byte cells and at most accept 1,000 bytes of characters input, not support comment so some examples which was with comments are much possible to cause eceptions. It just test by a limited test set which in the directory *test*.
