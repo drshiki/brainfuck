@@ -13,6 +13,12 @@
 #define		EXIT_NORMAL				0
 #define 	EXIT_WITH_EXCEPTION		-1
 
+void no_match_error();
+void show_version();
+void print_usage();
+void show_arg_error();
+void show_welcome();
+
 int intepreter(char *, char *);
 
 char *sub_interpreter(char **, char *);
@@ -22,8 +28,5 @@ char *jump_to_rbracket(char **, char *);
 char *go_loop(char **, char *);
 
 char get_arg(char *);
-
-void show_arg_error();
-
 
 #endif
