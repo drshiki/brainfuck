@@ -9,7 +9,7 @@
 #define 	PROGRAM_NAME			brainfuck
 #define 	VERSION 				"0.2.0"
 #define 	BRAINFUCK_TAPE_SIZE 	3000
-#define 	MAX_INPUT_SIZE 			1000
+#define 	MAX_INPUT_SIZE 			10000
 #define		EXIT_NORMAL				0
 #define 	EXIT_WITH_EXCEPTION		-1
 
