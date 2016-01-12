@@ -34,7 +34,8 @@ This interpreter was made as a product for my beginning level study of programmi
 ####Install
 Download this project and there are executable programs for windows7 64bit and linux, if can't run it correctly or you wnat to compile it manually, following steps below:
 	
-	cd src
+	git clone https://github.com/touchEngine/brainfuck.git
+	cd brainfuck/src
 	make
 	make install
 	make clean
