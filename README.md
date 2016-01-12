@@ -32,18 +32,18 @@ Brainfuck is a Turing-complete programming language created in 1993 by Urban Mü
 ###This Interpreter
 This interpreter was made as a product for my beginning level study of programming language, hence, it is simple and crude, use an array of 3,000 byte cells and at most accept 10,000 bytes of characters input. It just test by a limited test set which in the directory *test*. 
 ####Install
-Download this project and there are executable programs for windows7 64bit and linux, if can't run it correctly or you wnat to compile it manually, following the bellow
+Download this project and there are executable programs for windows7 64bit and linux, if can't run it correctly or you wnat to compile it manually, following steps below:
 	
 	cd src
 	make
 	make install
 	make clean
-And you done if no error messsage.
+And all will be done if no error messsage.
 ####Useage
 	type 'brainfuck' in your teminal with no argument to start an interactive prompt or
 	brainfuck [option] [arg]
 	options:
 	-f <file>	input the file and run it
-	-h 			show the help information\n
+	-h 			show the help information
 	-r <code>	run the brainfuck code directly
 	-v 			show version information of this interpreter
